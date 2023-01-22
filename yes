@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Set font to Verdana */
+      body {
+        font-family: Verdana;
+      }
+Copy code
+  /* All title headings in upper case and font size 8.5 */
+  h1, h2, h3 {
+    text-transform: uppercase;
+    font-size: 8.5px;
+  }
+  
+  /* Underline headings and number headings in red */
+  h1::before, h2::before, h3::before {
+    content: "(" attr(data-number) ") ";
+    color: red;
+  }
+  
+  h1, h2, h3 {
+    text-decoration: underline;
+  }
+  
+  /* Name, address, and contact information */
+  .name {
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .address, .contact {
+    font-size: 8.5px;
+  }
+  
+  /* Work experience in reverse chronological order */
+  .work-experience {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+</style>
+  </head>
+  <body>
+    <div class="name">
+      <h1 data-number="1">Your Name</h1>
+      <p class="address">Your Address</p>
+      <p class="contact">Phone Number: 555-555-5555</p>
+      <p class="contact">Email: yourname@email.com</p>
+    </div>
+Copy code
+<h2 data-number="2">Objective</h2>
+<p>Brief summary of your career goals and aspirations.</p>
+
+<h2 data-number="3">Education</h2>
+<p>List of relevant courses and degrees.</p>
+
+<h2 data-number="4">Achievements and Awards</h2>
+<p>Optional section for listing any accomplishments or awards.</p>
+
+<h2 data-number="5">Work Experience</h2>
+<div class="work-experience">
+  <p>Most recent job first, followed by others in the past.</p>
+</div>
+
+<h2 data-number="6">Other Skills</h2>
+<p>List of any additional skills or qualifications.</p>
+
+<h2 data-number="7">Co-curricular Activities</h2>
+<p>Brief list of any extracurricular activities or interests.</p>
+
+<h2 data-number="8">References</h2>
+<p>Available upon request.</p>
+  </body>
+</html>
